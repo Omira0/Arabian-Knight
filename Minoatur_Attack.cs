@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Minoatur_Attack : MonoBehaviour
 {
+    //Minoatur_Attack
     public int attackDamage = 20;
 
     public Vector3 attackOffset;

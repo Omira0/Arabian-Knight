@@ -63,3 +63,8 @@ public class Minotaur_Walk : StateMachineBehaviour
         canAttack = true; // Reset on exit to allow new attacks in the next walk state
     }
 }
+
+
+
+//927032
+

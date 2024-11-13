@@ -32,7 +32,7 @@ public class Player_Input : MonoBehaviour
 
         //Attacking(); //Calling Attacking Method.
 
-        Striking();//Calling Striking Method.
+        //Striking();//Calling Striking Method.
 
         Dashing(); //Calling Dashing Method.
 
@@ -63,6 +63,7 @@ public class Player_Input : MonoBehaviour
     }
     private void Jump()
     {
+
         //A method Jump to jump by pressing space button.
         bool isJumping = Input.GetKey(KeyCode.Space);
         //Making the char to jump
@@ -98,7 +99,7 @@ public class Player_Input : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }*/
+    }
     private void Striking()
     {
         //A method Striking to Strike by clicking right click. 
@@ -107,7 +108,7 @@ public class Player_Input : MonoBehaviour
             animator.SetTrigger("Strik");
         }
         
-    }
+    }*/
 
     private void Dashing()
     {
