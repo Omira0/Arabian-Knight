@@ -26,20 +26,8 @@ public class Minotaur : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
 
         this.enabled = false;
+
+        Destroy(gameObject, 1.25f);  // Adjust the delay as needed
     }
-    [SerializeField] float movement;
-    public bool isFacingRight = true;
-    [SerializeField] const float MinotaurSpeed = 2.5f;
-    public Rigidbody2D myRigidBody;
-    private void FixedUpdate()
-    {
-        myRigidBody.velocity = new Vector2(MinotaurSpeed * movement, myRigidBody.velocity.y);
-        if (movement < 0 && isFacingRight || movement > 0 && !isFacingRight)
-            Flip();
-    }
-    public void Flip()
-    {
-        transform.Rotate(0, 180, 0);
-        isFacingRight = !isFacingRight;
-    }
+    
 }
