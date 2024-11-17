@@ -30,11 +30,7 @@ public class Player_Input : MonoBehaviour
 
         Jump(); //Calling Jump Method.
 
-        //Attacking(); //Calling Attacking Method.
-
-        //Striking();//Calling Striking Method.
-
-        Dashing(); //Calling Dashing Method.
+        //Dashing(); //Calling Dashing Method.
 
         JumpAttacking(); //Calling JumpAttacking Method.
 
@@ -76,41 +72,9 @@ public class Player_Input : MonoBehaviour
         }
     }
 
-    /*private void Attacking()
-    {
-        //A method Attacking to attack by clicking left click I used Trigger as it is faster respond to one-time action.
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("Attack");
-        }
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
-        {
-            Debug.Log("We hit" + enemy.name);
-        }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null) { 
-            return;
-        }
-
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
-    private void Striking()
-    {
-        //A method Striking to Strike by clicking right click. 
-        if (Input.GetMouseButtonDown(1))
-        {
-            animator.SetTrigger("Strik");
-        }
-        
-    }*/
-
-    private void Dashing()
+   /* private void Dashing()
     {
         // A method to dash by pressing the 'S' button.
         if (Input.GetKeyDown(KeyCode.S) && isGrounded)
@@ -118,7 +82,7 @@ public class Player_Input : MonoBehaviour
             animator.SetTrigger("Dash"); // Use Trigger for one-time action
             myRigidBody.velocity = new Vector2(isFacingRight ? playerSpeed * 2 : -playerSpeed * 2, myRigidBody.velocity.y); // Dash in the facing direction
         }
-    }
+    }*/
 
     private void JumpAttacking()
     {

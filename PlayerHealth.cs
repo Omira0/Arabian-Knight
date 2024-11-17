@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     public Animator animator;
+    Player_Input freeze;
     
-
+    
 
     public void TakeDamage(int damage)
     {

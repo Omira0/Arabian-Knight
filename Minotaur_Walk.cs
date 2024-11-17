@@ -5,9 +5,9 @@ public class Minotaur_Walk : StateMachineBehaviour
 {
     Transform player;
     Rigidbody2D rb;
-    public float speed = 2.5f;
+    public float speed = 2f;
     MinotaurMotor scr;
-    public float attackRange = 2f;
+    [SerializeField] float attackRange = 2f;
     private bool canAttack = true; // Flag to prevent repeated attacks
     public float attackDistance = 1f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -31,7 +31,7 @@ public class Minotaur_Walk : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (scr == null || player == null) return;
-        Vector2 target = new Vector2(player.position.x -2, rb.position.y);
+        Vector2 target = new Vector2(player.position.x , rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
         if (rb.position.x > player.position.x && scr.isFacingRight)
